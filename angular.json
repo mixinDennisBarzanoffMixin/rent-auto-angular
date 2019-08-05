@@ -27,9 +27,28 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/css/bootstrap.min.css",
+              "src/css/bootstrap-datetimepicker.min.css",
+              "src/css/font-awesome.min.css",
+              "src/css/magnific-popup.css",
+              "src/css/owl.theme.css",
+              "src/css/owl.carousel.css",
+              "src/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/jquery-2.1.4.min.js",
+              "src/js/bootstrap.min.js",
+              "src/js/bootstrap-datetimepicker.min.js",
+              "src/js/jquery.magnific-popup.min.js",
+              "src/js/magnific-popup-options.js",
+              "src/js/owl.carousel.js",
+              "src/js/jquery.sticky.js",
+              "src/js/jquery.parallax.js",
+              "src/js/counter.js",
+              "src/js/smoothscroll.js",
+              "src/js/gmap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,6 +106,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -118,6 +138,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "rentauto-sofia"
 }

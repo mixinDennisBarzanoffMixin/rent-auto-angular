@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+    firebase: {
+      apiKey: 'AIzaSyCElJ96x_XME8tzUOnEdc8e4ly2kZSLvOY',
+      authDomain: 'rent-a-car-sofia.firebaseapp.com',
+      databaseURL: 'https://rent-a-car-sofia.firebaseio.com',
+      projectId: 'rent-a-car-sofia',
+      storageBucket: 'rent-a-car-sofia.appspot.com',
+      messagingSenderId: '225322772548',
+      appId: '1:225322772548:web:6c173a16026bf567'
+  }
 };
 
 /*
