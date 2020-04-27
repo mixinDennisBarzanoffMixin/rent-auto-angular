@@ -1,0 +1,58 @@
+<!-- Navigation Section -->
+<div class="navbar custom-navbar wow fadeInDown" data-wow-duration="2s" role="navigation" id="header">
+    <div class="container">
+
+        <!-- NAVBAR HEADER -->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
+                    class="icon icon-bar"></span> <span class="icon icon-bar"></span> <span
+                    class="icon icon-bar"></span></button>
+            <!-- lOGO TEXT HERE -->
+            <a href="/" class="navbar-brand">Sofia <span>RentAuto</span></a></div>
+
+        <!-- NAVIGATION LINKS -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li>
+                    <div id="google_translate_element" style="margin-top: 10px; color: gray"></div>
+                    <script type="text/javascript">
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({
+                                pageLanguage: 'bg',
+                                includedLanguages: 'en',
+                                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                            }, 'google_translate_element');
+                        }
+                    </script>
+                    <script type="text/javascript"
+                            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                </li> -->
+                <li>
+                    <a href="javascript:void(0)" id="paypal_btn" class="btn btn-default">
+                        <i class="fab fa-paypal" aria-hidden="true">Капаро</i>
+                    </a>
+                </li>
+                <li><a href="https://drive.google.com/uc?export=download&amp;id=1VqlTGN6csN1KcLiStmg10v5IvlQJRP-Z">
+                        Пълни условия
+                    </a></li>
+                <!--<li><a href="/#search" class="smoothScroll">Потърсете</a></li>-->
+                <!--<li><a href="/#about" class="smoothScroll">За нас</a></li>-->
+                <li><a href="/#map" class="smoothScroll">Карта</a></li>
+                <li>
+                    <ng-container *ngIf="auth.user$ | async as user; else login">
+                        <a (click)="auth.signOut()">Излез</a>
+                    </ng-container>
+                </li>
+                <li><a href="tel:+359 899 5888 30" class="calltxt" onclick=""><i class="fa fa-phone"
+                            aria-hidden="true"></i> +359 899 5888
+                        30</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<ng-template #login>
+    <a (click)="auth.googleSignin()">Влез</a>
+</ng-template>

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-declare var $: any;
+declare var $: any
 
 @Component({
   selector: 'app-root',
@@ -13,17 +13,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
       /*==== Loader ====*/
       $('.preloader').fadeOut(1000); // set duration in brackets
-
-      /*==== Date Picker ====*/
-      $('.form_datetime').datetimepicker({
-        weekStart: 1,
-        todayBtn: 1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        forceParse: 0,
-        showMeridian: 1
-      });
 
       /*==== Nav ====*/
       $('.navbar-collapse a').on('click', () => {

@@ -28,26 +28,27 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/css/bootstrap.min.css",
-              "src/css/bootstrap-datetimepicker.min.css",
-              "src/css/font-awesome.min.css",
-              "src/css/magnific-popup.css",
-              "src/css/owl.theme.css",
-              "src/css/owl.carousel.css",
-              "src/css/style.css"
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/bootstrap-datetimepicker.min.css",
+              "src/assets/css/fontawesome-all.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/owl.theme.css",
+              "src/assets/css/owl.carousel.css",
+              "src/styles.scss"
             ],
             "scripts": [
-              "src/js/jquery-2.1.4.min.js",
-              "src/js/bootstrap.min.js",
-              "src/js/bootstrap-datetimepicker.min.js",
-              "src/js/jquery.magnific-popup.min.js",
-              "src/js/magnific-popup-options.js",
-              "src/js/owl.carousel.js",
-              "src/js/jquery.sticky.js",
-              "src/js/jquery.parallax.js",
-              "src/js/counter.js",
-              "src/js/smoothscroll.js",
-              "src/js/gmap.js"
+              // "src/assets/js/moment.js",
+              "src/assets/js/jquery-2.1.4.min.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/bootstrap.min.js",
+              // "src/assets/js/bootstrap-datetimepicker.min.js",
+              "src/assets/js/magnific-popup-options.js",
+              "src/assets/js/owl.carousel.js",
+              "src/assets/js/jquery.sticky.js",
+              "src/assets/js/jquery.parallax.js",
+              "src/assets/js/counter.js",
+              "src/assets/js/smoothscroll.js",
+              "src/assets/js/gmap.js"
             ]
           },
           "configurations": {
@@ -106,8 +107,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -140,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "rentauto-sofia"
+  "defaultProject": "rentauto-sofia",
+  "cli": {
+    "analytics": "804210d9-ca1a-404e-b553-d9e12794be1e"
+  }
 }

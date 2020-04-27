@@ -1,0 +1,59 @@
+<div class="innercms">
+    <div class="container">
+
+        <!-- Blog start -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Blog List start -->
+                <div class="blogWraper">
+                    <ul class="blogList">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="postimg"><img src="${car.imgUrl}" alt="Car image"></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="post-header">
+                                        <h1><a>[[${car.name}]]</a></h1>
+                                        <div style="font-size: 25px" class="date"><i class="fa fa-calendar" aria-hidden="true"></i> Дата на взимане: [[${param.datetime_pick[0]}]]</div>
+                                        <div style="font-size: 25px" class="date"><i class="fa fa-calendar" aria-hidden="true"></i> Дата на връщане: [[${param.datetime_off[0]}]]</div>
+                                        <div style="font-size: 25px" class="date">Deposit: +&euro;[[${car.deposit}]]</div>
+                                        <div style="font-size: 25px" class="date"><i class="fa fa-money-bill-alt" aria-hidden="true"></i> TOTAL: &euro;[[${car.price}]] * [[${days}]]d + &euro;[[${car.deposit}]] = &euro;[[${totalPrice}]]</div>
+                                    </div>
+                                    <div>
+                                        <form th:action="@{/car/{id}/book(id=${car.id})}" id="confirmForm" method="POST" >
+					                        <input type="submit" style="display: none" id="confirmButton"/>
+                                            <div class="formrow" th:with="deposit = ${totalPrice*25/100}">
+                                                <input type="hidden" id="startDate" name="startDate" th:value="${param.datetime_pick[0]}" />
+                                                <input type="hidden" id="endDate" name="endDate" th:value="${param.datetime_off[0]}"/>
+                                                <input type="hidden" id="deposit" name="deposit" th:value="${deposit}"/>
+
+
+                                                <label for="email">Email (незадължителен)</label>
+                                                <input type="text" class="custom-input" id="email" name="email" th:value="${customer.email}" required="required" />
+
+                                                <br/>
+
+                                                <label for="phoneNumber">Телефон<span style="color: red">*</span></label>
+                                                <input type="tel" id="phoneNumber" name="phoneNumber" th:value="${customer.phoneNumber}" class="custom-input" required="required"/>
+                                                <script th:src="@{/intl-tel-input-12.1.0/build/js/intlTelInput.js}" type="text/javascript"></script>
+
+                                                <script>
+                                                    $("#phoneNumber").intlTelInput({
+                                                        nationalMode: false,
+                                                        preferredCountries: ['bg']
+                                                    });
+                                                </script>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <a href="javascript:{}" onclick="submitBooking()" class="readmore">Потвърди заявката<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

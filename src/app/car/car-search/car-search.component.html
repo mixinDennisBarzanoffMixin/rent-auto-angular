@@ -1,0 +1,62 @@
+<!-- Form Section -->
+<div class="container" id="search">
+    <div class="bformBox">
+        <h3>РЕЗЕРВИРАЙТЕ КОЛА ДНЕС!</h3>
+        <form id="searchForm" [formGroup]="checkoutForm" (ngSubmit)="search()" > 
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="formrow">
+                        <div class="input-group"> <span class="input-group-addon"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Място на взимане</span>
+                            <select class="form-control" data-live-search="true" name="pickup" id="pickup" required="required" >
+                                <option value="">Mясто на взимане</option>
+                                <option selected>Sofia</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="formrow">
+                        <mat-form-field class='input-group date example-full-width' id='datetime_pick'>
+                            <mat-label>Дата на взимане</mat-label>
+                            <input (dateInput)="setStartDate($event)" matInput [max]="endDate" [matDatepicker]="pickerStartDate" required="required" formControlName="startDate">
+                            <mat-datepicker-toggle matSuffix [for]="pickerStartDate">
+                                <!-- <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> -->
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #pickerStartDate></mat-datepicker>
+                          </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="formrow">
+                        <div class="input-group"> <span class="input-group-addon"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Място на връщане</span>
+                            <select class="form-control" data-live-search="true" name="dropoff" id="drop" required="required">
+                                <option value="" >Mясто на връщане</option>
+                                <option selected>Sofia</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="formrow">
+						<mat-form-field class="example-full-width">
+                            <mat-label>Choose a date</mat-label>
+                            <input (dateInput)="setEndDate($event)" matInput [min]="startDate" [matDatepicker]="pickerEndDate" formControlName="endDate">
+                            <mat-datepicker-toggle matSuffix [for]="pickerEndDate"></mat-datepicker-toggle>
+                            <mat-datepicker #pickerEndDate></mat-datepicker>
+                          </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="color: red; font-size: 20px; text-align: center;" id="error"></p>
+            </div>
+            <div class="formbtn">
+                <input type="submit" class="btn" value="Потърси коли">
+            </div>
+        </form>
+    </div>
+</div>

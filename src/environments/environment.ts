@@ -5,13 +5,14 @@
 export const environment = {
   production: false,
     firebase: {
-      apiKey: 'AIzaSyCElJ96x_XME8tzUOnEdc8e4ly2kZSLvOY',
-      authDomain: 'rent-a-car-sofia.firebaseapp.com',
-      databaseURL: 'https://rent-a-car-sofia.firebaseio.com',
-      projectId: 'rent-a-car-sofia',
-      storageBucket: 'rent-a-car-sofia.appspot.com',
-      messagingSenderId: '225322772548',
-      appId: '1:225322772548:web:6c173a16026bf567'
+      apiKey: "AIzaSyAbAsE8sesQaaEoVRDusAe_l3BLJSAG3wU",
+      authDomain: "rentautosofia.firebaseapp.com",
+      databaseURL: "https://rentautosofia.firebaseio.com",
+      projectId: "rentautosofia",
+      storageBucket: "rentautosofia.appspot.com",
+      messagingSenderId: "530507070423",
+      appId: "1:530507070423:web:d6b8172cd1503e1db2a992",
+      measurementId: "G-T854SD44PN"
   }
 };
 
